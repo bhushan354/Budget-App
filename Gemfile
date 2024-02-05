@@ -72,5 +72,5 @@ group :test do
   gem 'shoulda-matchers'
 end
 
-gem 'devise'
 gem 'cancancan'
+gem 'devise'
