@@ -10,9 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_05_113003) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_05_152749) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.string "icon"
+    t.bigint "author_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_categories_on_author_id"
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.string "name"
+    t.decimal "amount"
+    t.bigint "author_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_payments_on_author_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
@@ -20,4 +38,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_05_113003) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "categories", "users", column: "author_id"
+  add_foreign_key "payments", "users", column: "author_id"
 end
