@@ -72,4 +72,4 @@ group :test do
   gem 'shoulda-matchers'
 end
 
-gem "devise"
+gem 'devise'
