@@ -20,21 +20,6 @@ class CategoriesController < ApplicationController
     end
   end
 
-  def edit
-    @category = Category.find(params[:id])
-  end
-
-  def update
-    @category = Category.find(params[:id])
-    if @categorys.update(category_params)
-      flash[:success] = 'category updated successfully'
-      redirect_to categories_path
-    else
-      flash.now[:error] = @category.errors.full_messages.to_sentence
-      render :edit
-    end
-  end
-
   def destroy
     @category = Category.find(params[:id])
     if @category.destroy

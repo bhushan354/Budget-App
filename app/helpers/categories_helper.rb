@@ -4,7 +4,7 @@ module CategoriesHelper
   end
 
   def check_url(url)
-    default = 'no-pictures.png'
+    default = 'category.svg'
     if (File.extname(url) =~ /^(.png|.gif|.jpg)$/) || (url =~ /^#{URI::DEFAULT_PARSER.make_regexp}$/)
       url
     else
