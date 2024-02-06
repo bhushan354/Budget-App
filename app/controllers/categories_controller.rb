@@ -3,6 +3,10 @@ class CategoriesController < ApplicationController
     @categories = current_user.categories
   end
 
+  def new
+    @category = Category.new
+  end
+
   def show; end
 
   def create
@@ -45,6 +49,6 @@ class CategoriesController < ApplicationController
   private
 
   def category_params
-    params.require(:category).permit(:name, icon)
+    params.require(:category).permit(:name, :icon)
   end
 end

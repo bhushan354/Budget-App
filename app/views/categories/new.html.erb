@@ -1,0 +1,32 @@
+<div id="category-list">
+    <h2>Add new Category</h2>
+    <div id="hamburger">
+        <%= image_tag("hamburger.svg", class: "hamburger-menu") %>
+    </div>
+</div>
+
+<div class="form-add-category">
+    <% flash.each do |name, message| -%>
+      <%= content_tag :div, message, class: name %>
+    <% end %>
+    <%= form_with model: @category, class: "form-category" do |form| %>
+
+       <div class="field">
+          <%= form.label :name, "Name here" %>
+          <%= form.text_field :name, autofocus: true, autocomplete: "name here", placeholder: "clothes" %>
+       </div>
+
+       <div class="field">
+           <%= form.label :icon, "Icon here" %>
+           <%= form.text_field :icon, autofocus: true, autocomplete: "icon link here", placeholder: "clothes" %>
+       </div>
+
+       <p>* Please, provide a valid link that starts with <strong>'https:'</strong> and ends with <strong>'png/gif/jpg'</strong>.</p>
+
+       <div class="actions">
+         <%= form.submit "add category", data: { turbo: false }, class: "btn" %>
+       </div>
+
+    <% end %>
+
+</div>
