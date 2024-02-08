@@ -22,7 +22,7 @@ class CategoriesController < ApplicationController
 
   def destroy
     @category = Category.find(params[:id])
-    # also instead of this below line you can write 'dependent: destroy' in category model to destroy all the payments related to it
+    # instead of below line you can write 'dependent: destroy' in category model to destroy all the payments related
     CategoryPayment.where(category_id: @category.id).destroy_all
     if @category.destroy
       flash[:success] = 'category deleted successfully'
