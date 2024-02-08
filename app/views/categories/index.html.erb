@@ -1,0 +1,42 @@
+<div id="category-list">
+    <h2 class="page-title">Your Categories</h2>
+    <div id="hamburger">
+        <%= image_tag("hamburger.svg", class: "hamburger-menu") %>
+    </div>
+</div>
+
+<div>
+    <div class="main-catgry">
+        <% flash.each do |name, message| %>
+           <%= content_tag :div, message, class: name %>
+        <% end %>
+
+        <% if @categories.empty? %>
+           <div class="empty-cat">
+              <p>No categories to show. Add new category to make them appear here</p>
+           </div>
+        <% else %>
+           <div class="all-cat">
+               <% @categories.each do |category| %>
+                 <!-- helper method "total_amount"  -->
+                 <% total_amount = total_amount(category) %>
+                 <div class="list-cat">
+                    <%= link_to category_payments_url(category), { data: { turbo: false }, class: 'item' } do %>
+                        <%= image_tag(check_url(category.icon), class: 'icon') %>
+                        <ul>
+                            <span class="name"><%= category.name %></span>
+                            <span class="name"><%= total_amount %></span>
+                            <span class="name"><%= category.created_at.strftime('%d %b %y') %></span>
+                        </ul>
+                    <% end %>
+                    <%= button_to "Delete", category_path(category), method: :delete, data: { confirm: "Are you sure you want to delete this category?" }, class: "btn-delete" %>
+                 </div>
+               <% end %>
+           </div>
+        <% end %>
+    </div>
+</div>
+
+<footer class="footer">
+    <%= link_to "ADD CATEGORY", new_category_path, class: "btn", data: { turbo: false }  %>
+</footer>
