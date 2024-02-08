@@ -15,7 +15,9 @@
  */
 /* CSS */
 
-#menu-container {
+* {border:1px solid red}
+
+/* #menu-container {
     display:hidden;
     position: fixed;
     top: 0;
@@ -31,11 +33,122 @@
 }
 
 #menu {
-    display:hidden;
+    display: hidden;
     position: absolute;
+    height: 100vh;
+    width: 80vw;
     top: 50%;
     left: 50%;
+    margin-left: -57px;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: cornflowerblue;
     padding: 20px;
+} */ 
+
+#category-list {
+display: flex;
 }
+
+img#hamburger-icon {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 25px;
+    width: 25px;
+}
+div#hamburger {
+    display: flex;
+    align-items: center;
+}
+
+#category-list {
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-between;
+}
+
+.whole-menu {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+/* Variables */
+:root {
+    --blue: #3b74b4;
+    --white: #fff;
+    --grey: #e4e4e4;
+    --secondary-white: #f7f7f7;
+    --green: #67b930;
+    --normal-grey: #616161;
+    --light-grey: #8d8d8d;
+    --dark-grey: #2b2b2b;
+    --red: #c72727;
+  }
+  
+  /* Menu styles */
+  #menu {
+    position: absolute;
+    height: 100vh;
+    width: 80%;
+    background-image: linear-gradient(to right, var(--blue), #215794);
+    z-index: 5;
+    opacity: 0.95;
+    color: white;
+    padding: 1rem;
+    font-size: 1.1rem;
+    display: hidden;
+    position: absolute;
+    height: 100vh;
+    width: 80vw;
+    top: 50%;
+    left: 50%;
+    margin-left: -57px;
+    transform: translate(-50%, -50%);
+    background-color: cornflowerblue;
+    padding: 20px;
+  }
+  
+  #menu ul {
+    margin-top: 1rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #menu li {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  #menu a {
+    flex: 1;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid white;
+    color: white;
+    font-weight: 100;
+  }
+  
+  /* User info styles */
+  .user_info {
+    border: 1px solid white;
+    height: 5rem;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .user_info span:last-child {
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Menu icon styles */
+  .menu_icons {
+    height: 1.5rem;
+  }
+  
