@@ -1,5 +1,6 @@
 class PaymentsController < ApplicationController
   before_action :set_category, only: %i[index new create]
+  before_action :set_payment, only: [:destroy]
 
   def index
     @payments = @category.payments.order(id: :desc)
@@ -23,6 +24,16 @@ class PaymentsController < ApplicationController
     end
   end
 
+  def destroy
+    if @payment.destroy
+      
+      flash[:success] = 'trnaction was successfully deleted.'
+    else
+      flash[:error] = 'Failed to delete trnaction.'
+    end
+    redirect_to categories_path
+  end
+
   private
 
   def set_category
@@ -33,6 +44,14 @@ class PaymentsController < ApplicationController
     redirect_to categories_path
   end
 
+  def set_payment
+    @payment = Payment.find_by(id: params[:id])
+    unless @payment
+      flash[:error] = 'Payment not found'
+      redirect_to categories_path and return
+    end
+  end
+  
   def payment_params
     params.require(:payment).permit(:name, :amount, category_ids: [])
   end
