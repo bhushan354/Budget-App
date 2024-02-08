@@ -38,7 +38,6 @@
     </div>
 </div>
 
-<!-- CSS to hide/show menu when hamburger icon is clicked -->
 <style>
     #menu.hidden {
         display: none;
@@ -76,8 +75,8 @@
                             <span class="name"><%= total_amount %></span>
                             <span class="name"><%= category.created_at.strftime('%d %b %y') %></span>
                         </ul>
+                        <%= button_to "Delete", category_path(category), method: :delete, data: { confirm: "Are you sure you want to delete this category?" }, class: "btn-delete" %>
                     <% end %>
-                    <%= button_to "Delete", category_path(category), method: :delete, data: { confirm: "Are you sure you want to delete this category?" }, class: "btn-delete" %>
                  </div>
                <% end %>
            </div>
