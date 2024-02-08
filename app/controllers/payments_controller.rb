@@ -26,7 +26,7 @@ class PaymentsController < ApplicationController
 
   def destroy
     if @payment.destroy
-      
+
       flash[:success] = 'trnaction was successfully deleted.'
     else
       flash[:error] = 'Failed to delete trnaction.'
@@ -46,12 +46,12 @@ class PaymentsController < ApplicationController
 
   def set_payment
     @payment = Payment.find_by(id: params[:id])
-    unless @payment
-      flash[:error] = 'Payment not found'
-      redirect_to categories_path and return
-    end
+    return if @payment
+
+    flash[:error] = 'Payment not found'
+    redirect_to categories_path and return
   end
-  
+
   def payment_params
     params.require(:payment).permit(:name, :amount, category_ids: [])
   end
