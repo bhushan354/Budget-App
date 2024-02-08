@@ -1,0 +1,36 @@
+<div id="menu" class='hidden'>
+    <nav>
+      <% if current_user %>
+        <div class='user_info'>
+          <span>
+            <%= current_user.name %>
+          </span>
+          <span>
+            <%= current_user.email %>
+          </span>
+        </div>
+      <% end %>
+      <ul> 
+        <li>
+          <!-- <img src="settings.svg" alt="Settings" class="menu_icons"> -->
+          <a href="#">Account settings</a>
+        </li>
+        <li>
+          <!-- <img src="settings.svg" alt="Settings" class="menu_icons"> -->
+          <a href="#">All purchases</a>
+        </li>
+        <li>
+          <!-- <img src="about.svg" alt="About" class="menu_icons"> -->
+          <a href="#">About</a>
+        </li>
+        <li>
+          <!-- <img src="sign_out.svg" alt="Sign Out" class="menu_icons"> -->
+          <% if current_user %>
+          <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to "Log in", new_user_session_path %>
+          <% end %>
+        </li>
+      </ul>
+    <nav>
+  </div>
