@@ -9,7 +9,6 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
-
   get 'pages/splash'
   get 'pages/about'
 

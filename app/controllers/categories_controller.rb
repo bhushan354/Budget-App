@@ -22,6 +22,7 @@ class CategoriesController < ApplicationController
 
   def destroy
     @category = Category.find(params[:id])
+    CategoryPayment.where(category_id: @category.id).destroy_all
     if @category.destroy
       flash[:success] = 'category deleted successfully'
       redirect_to categories_path
