@@ -1,29 +1,40 @@
-<div class="opened-category">
+<div id="category-list">
   <header class="navbar">
     <%= link_to categories_path, class: 'back-icon' do %>
-      <i class="fas fa-chevron-left"></i>
+    <%= image_tag("back.png", class: "hamburger-menu", id: "hamburger-icon") %>
     <% end %>
-    <h2 class="page-title">Your Transactions</h2>
+    <h2 class="page-title2">Your Transactions</h2>
   </header>
-
-  <% if @payments.any? %>
-    <% total_amount = @payments.sum(:amount) %>
-    <span class="amount">Total amount: $<%= total_amount %></span>
-    <ul class='main-t'>
-      <% @payments.each do |payment| %>
-        <li class='list-pay'>
-          <span class="name"><%= payment.name %></span>
-          <span class="date"><%= payment.created_at.strftime('%d %b %Y') %></span>
-          <span class="amount">$<%= payment.amount %></span>
-          <%= button_to "Delete", category_payment_path(@category, payment), method: :delete, data: { confirm: "Are you sure you want to delete this payment?" }, class: "btn-delete" %>
-        </li>
-      <% end %>
-    </ul>
-  <% else %>
-    <p>No transactions available. <%= link_to "Click here to create a new transaction", new_category_payment_path, class: "btn", data: { turbo: false } %></p>
-  <% end %>
-
-  <footer class="footer">
-    <%= link_to "ADD PAYMENT", new_category_payment_path, class: "btn", data: { turbo: false } %>
-  </footer>
 </div>
+
+
+<div class="main-catgry2">
+  <% if @payments.any? %>
+  <% total_amount = @payments.sum(:amount) %>
+  <span class="amount">Total amount: $<%= total_amount %></span>
+  <div class="all-cat2">
+    <% @payments.each do |payment| %>
+        <div class="spn-container", style="display: flex;justify-content: space-between;
+        background-color: rgb(255, 255, 255); margin-top: 10px;">
+          <ul class="spn-item">
+            <span class="name"><%= payment.name %></span>
+            <span class="date"><%= payment.created_at.strftime('%d %b %Y') %></span>
+          </ul>
+    
+          <ul class="spn-item">
+            <span class="amount">$<%= payment.amount %></span>
+            <%= button_to "Delete", category_payment_path(@category, payment), method: :delete, data: { confirm: "Are you sure you want to delete this payment?" }, class: "btn-delete" %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+  <% else %>
+  <div class="empty-cat">
+    <p>No transactions available. <%= link_to "Click here to create a new transaction", new_category_payment_path, class: "btn", data: { turbo: false } %></p>
+  </div>
+  <% end %>
+</div>
+
+<footer class="footer">
+  <%= link_to "ADD PAYMENT", new_category_payment_path, class: "btn", data: { turbo: false } %>
+</footer>

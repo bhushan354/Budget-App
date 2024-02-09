@@ -1,9 +1,15 @@
 <div id="category-list">
-    <h2>Add new Category</h2>
-    <div id="hamburger">
-        <%= image_tag("hamburger.png", class: "hamburger-menu") %>
-    </div>
+  <div class="navbar-new"
+      <h2 class="page-title">Add New Categories</h2>
+      <div id="back-button">
+        <%= link_to categories_path, class: 'back-icon' do %>
+        <%= image_tag("back.png", class: "hamburger-menu", id: "hamburger-icon") %>
+        <% end %>
+      </div>
+  </div>
+
 </div>
+
 
 <div class="form-add-category">
     <% flash.each do |name, message| -%>
@@ -13,18 +19,18 @@
 
        <div class="field">
           <%= form.label :name, "Name here" %>
-          <%= form.text_field :name, autofocus: true, autocomplete: "name here", placeholder: "clothes" %>
+          <%= form.text_field :name, autofocus: true, autocomplete: "name here", placeholder: "Any category" %>
        </div>
 
        <div class="field">
            <%= form.label :icon, "Icon here" %>
-           <%= form.text_field :icon, autofocus: true, autocomplete: "icon link here", placeholder: "clothes" %>
+           <%= form.text_field :icon, autofocus: true, autocomplete: "icon link here", placeholder: "Valid icon link here" %>
        </div>
 
        <p>* Please, provide a valid link that starts with <strong>'https:'</strong> and ends with <strong>'png/gif/jpg'</strong>.</p>
 
-       <div class="actions">
-         <%= form.submit "add category", data: { turbo: false }, class: "btn" %>
+       <div class="footer2">
+         <%= form.submit "Add category", data: { turbo: false }, class: "btn" %>
        </div>
 
     <% end %>

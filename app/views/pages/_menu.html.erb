@@ -12,19 +12,12 @@
       <% end %>
       <ul> 
         <li>
-          <!-- <img src="settings.svg" alt="Settings" class="menu_icons"> -->
           <a href="#">Account settings</a>
         </li>
         <li>
-          <!-- <img src="settings.svg" alt="Settings" class="menu_icons"> -->
           <a href="#">All purchases</a>
         </li>
         <li>
-          <!-- <img src="about.svg" alt="About" class="menu_icons"> -->
-          <a href="#">About</a>
-        </li>
-        <li>
-          <!-- <img src="sign_out.svg" alt="Sign Out" class="menu_icons"> -->
           <% if current_user %>
           <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
           <% else %>
