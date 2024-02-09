@@ -217,9 +217,30 @@ img.icon {
   display: contents;
 }
 
+.cat-2 .name,
+.cat-2 .time,
+.cat-1 .amount {
+  text-decoration: none !important;
+}
+
 span.name {
-  display: flex;
-  align-items: center;
+    display: flex;
+    color: rgb(97, 97, 97);
+    font-size: 1.2rem;
+    align-items: center;
+    font-family: 'proxima-nova', sans-serif;
+}
+
+span.amount {
+    text-decoration: none !important;
+    color: rgb(43, 43, 43);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+span.time {
+  color: rgb(141, 141, 141);
+  font-size: 0.9rem;
 }
 
 ul.cat-2 {
@@ -228,6 +249,15 @@ ul.cat-2 {
   gap: 10px;
   padding: 0;
   width: 40vw;
+}
+
+body {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 300px;
 }
 
 /* category-form styling */
@@ -263,9 +293,7 @@ ul.cat-2 {
 }
 
 .form-add-category {
-  padding: 0.8rem;
-  height: 90vh;
-  margin-bottom: 5rem;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -277,4 +305,15 @@ ul.cat-2 {
 .footer2 {
   display: flex;
   justify-content: center;
+}
+
+.notice {
+    color: #3b74b4;
+}
+
+.success, .error, .notice, .empty {
+    background-color: #fff;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    font-style: italic;
 }

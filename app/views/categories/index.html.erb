@@ -75,11 +75,11 @@
                     <%= link_to category_payments_url(category), { data: { turbo: false }, class: 'item' } do %>
                         <%= image_tag(check_url(category.icon), class: 'icon') %>
                         <div class="cat-1">
-                            <ul class="cat-2">
+                    <ul class="cat-2">
                             <span class="name"><%= category.name %></span>
-                            <span class="name"><%= category.created_at.strftime('%d %b %y') %></span>
-                        </ul>
-                            <span class="name"><%= total_amount %></span>
+                            <span class="time"><%= category.created_at.strftime('%d %b %y') %></span>
+                      </ul>
+                            <span class="amount">$<%= total_amount %></span>
                         </div>
                         <!-- <%= button_to "Delete", category_path(category), method: :delete, data: { confirm: "Are you sure you want to delete this category?" }, class: "btn-delete" %> -->
                     <% end %>
