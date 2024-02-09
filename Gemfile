@@ -77,4 +77,3 @@ gem 'devise'
 gem 'carrierwave'
 
 gem 'cancancan'
-
