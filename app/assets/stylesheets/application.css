@@ -91,6 +91,10 @@
   margin-bottom: 18px;
 }
 
+.main-catgry {
+  height: 83vh;
+}
+
 img#hamburger-icon {
   display: flex;
   flex-wrap: wrap;
