@@ -2,16 +2,16 @@ source 'https://rubygems.org'
 
 ruby '3.0.2'
 
+gem 'bundler', '~> 2.5', '>= 2.5.4'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.2'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
-# Use postgreSQL as the database for Active Record
+# Use postgresql as the database for Active Record
 gem 'pg'
-
-gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '>= 5.0'
@@ -41,7 +41,7 @@ gem 'jbuilder'
 gem 'tzinfo-data', platforms: %i[windows jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', require: false
+gem 'bootsnap', '~> 1.17'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -54,7 +54,7 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
-group :production do
+group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
 
@@ -67,10 +67,13 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'factory_bot_rails'
   gem 'selenium-webdriver'
-  gem 'shoulda-matchers'
 end
 
-gem 'cancancan'
+gem 'rubocop', '>= 1.0', '< 2.0'
+
 gem 'devise'
+
+gem 'carrierwave'
+
+gem 'cancancan'
