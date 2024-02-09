@@ -68,7 +68,6 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'factory_bot_rails'
-  gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
 end
