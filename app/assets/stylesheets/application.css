@@ -68,12 +68,11 @@
 
 .all-cat2 {
   display: flex;
-  height: 10vh;
+  height: 71vh;
+  flex-direction: column;
   /* width: 100vw; */
   padding: 10px;
-  justify-content: space-between;
-  background-color: rgb(255, 255, 255);
-
+  /* justify-content: space-between; */
 }
 
 .spn-item {
