@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Categories', type: :request do
-  let(:category) { Category.create( name: 'Food', icon: 'missing_avatar.png') }
+  let(:category) { Category.create(name: 'Food', icon: 'missing_avatar.png') }
   let(:payment) { Payment.create(name: 'Apples', amount: 5, author: @user) }
   let(:category_payment) { CategoryPayment.create(category: category, payment: payment) }
   let(:valid_attributes) { { 'name' => 'Bananas', 'amount' => 5, 'author' => @user, 'category_ids' => [category.id] } }
@@ -29,7 +29,6 @@ RSpec.describe 'Categories', type: :request do
     it 'returns http success' do
       expect(response).to have_http_status(:found)
     end
-
   end
 
   context 'GET /create' do
