@@ -20,6 +20,11 @@
 
 #category-list {
   display: flex;
+  flex-direction: column;
+}
+
+h2.page-title {
+  font-weight: 200;
 }
 
 #category-list2 {
@@ -28,8 +33,12 @@
 }
 
 .all-cat {
-  height: 78vh;
+  height: 84vh;
   background-color: rgb(228, 228, 228);
+}
+
+.list-cat {
+  padding: 10px;
 }
 
 .all-cat2 {
@@ -57,7 +66,6 @@
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  padding: 20px 12px;
 }
 
 .navbar-new {
@@ -83,6 +91,13 @@ img#hamburger-icon {
   align-content: center;
   height: 25px;
   width: 25px;
+  margin-left: 10px;
+}
+
+img#hamburger-icon2 {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
 }
 
 div#hamburger {
@@ -114,6 +129,16 @@ div#back-button {
 }
 
 /* Menu styles */
+
+.amount > a {
+  text-decoration: none;
+}
+
+.link-logins > a {
+  text-decoration: none;
+  border-radius: 4px;
+}
+
 #menu {
   position: absolute;
   height: 100vh;
@@ -150,6 +175,10 @@ div#back-button {
   text-align: center;
 }
 
+.list-cat > a {
+  text-decoration: none;
+}
+
 .splash a {
   display: block;
   height: 3rem;
@@ -176,6 +205,11 @@ div#back-button {
 }
 
 /* User info styles */
+.total-amount > span {
+  color: #616161;
+  font-weight: 400;
+}
+
 .user_info {
   border: 1px solid white;
   height: 5rem;
@@ -201,7 +235,6 @@ div#back-button {
 /* all categories styling  */
 a.item {
   display: flex;
-  margin-top: 15px;
   justify-content: space-around;
   align-items: center;
   background: white;
@@ -228,11 +261,6 @@ img.icon {
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
-
-.list-cat > a {
-  text-decoration: none;
-}
-
 
 .list-cat.item {
   min-height: 80vh;
@@ -262,11 +290,6 @@ span.amount {
   font-size: 1rem;
   color: rgb(37, 37, 37);
   font-weight: 600;
-}
-
-.total-amount > span {
-  color: #616161;
-  font-weight: 400;
 }
 
 span.time {
@@ -353,7 +376,6 @@ input:-webkit-autofill:active {
   align-items: center;
   flex-direction: column;
   background-color: rgb(228, 228, 228);
-  flex: 1 1 0%;
 }
 
 .footer2 {
@@ -378,10 +400,6 @@ input:-webkit-autofill:active {
   display: flex;
   padding: 4px;
   justify-content: space-between;
-}
-
-.amount > a {
-  text-decoration: none;
 }
 
 /* login-page */
@@ -409,14 +427,10 @@ input:-webkit-autofill:active {
   font-family: 'Pacifico', cursive;
   font-style: italic;
 }
+
 .link-logins {
   padding-left: 12px;
-  padding-right: 12px; 
-}
-
-.link-logins > a {
-  text-decoration: none;
-  border-radius: 4px;
+  padding-right: 12px;
 }
 
 .notice {
