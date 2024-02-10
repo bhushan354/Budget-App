@@ -230,6 +230,11 @@ img.icon {
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
+.list-cat > a {
+  text-decoration: none;
+}
+
+
 .list-cat.item {
   min-height: 80vh;
   background-color: #999;
