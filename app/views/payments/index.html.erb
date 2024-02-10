@@ -11,7 +11,12 @@
 <div class="all-cat">
   <% if @payments.any? %>
   <% total_amount = @payments.sum(:amount) %>
-  <span class="amount">Total amount: $<%= total_amount %></span>
+  <div class="total-amount">
+    <span class="amount">Total amount:</span>
+    <a> 
+    $ <%= total_amount %> 
+  </a>
+  </div>
   <div class="all-cat2">
     <% @payments.each do |payment| %>
         <div class="spn-container", style="display: flex;justify-content: space-between;

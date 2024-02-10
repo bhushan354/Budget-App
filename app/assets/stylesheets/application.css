@@ -30,7 +30,6 @@
 .all-cat {
   height: 78vh;
   background-color: rgb(228, 228, 228);
-  padding: 11px;
 }
 
 .all-cat2 {
@@ -260,9 +259,14 @@ span.name {
 
 span.amount {
   text-decoration: none !important;
-  color: rgb(43, 43, 43);
   font-size: 1rem;
+  color: rgb(37, 37, 37);
   font-weight: 600;
+}
+
+.total-amount > span {
+  color: #616161;
+  font-weight: 400;
 }
 
 span.time {
@@ -361,10 +365,23 @@ input:-webkit-autofill:active {
 .error,
 .notice,
 .empty {
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   margin-bottom: 0.5rem;
   padding: 0.5rem;
   font-style: italic;
+}
+
+.total-amount {
+  background-color: rgb(255, 255, 255);
+  height: 45px;
+  align-items: center;
+  display: flex;
+  padding: 4px;
+  justify-content: space-between;
+}
+
+.amount > a {
+  text-decoration: none;
 }
 
 /* login-page */
