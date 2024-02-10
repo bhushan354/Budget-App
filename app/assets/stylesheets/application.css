@@ -384,7 +384,6 @@ input:-webkit-autofill:active {
   background-color: #e4e4e4;
   color: #2b2b2b;
   height: 100vh;
-  padding: 10px;
 }
 
 .splash h1 {
@@ -393,9 +392,14 @@ input:-webkit-autofill:active {
   font-family: 'Pacifico', cursive;
   font-style: italic;
 }
+.link-logins {
+  padding-left: 12px;
+  padding-right: 12px; 
+}
 
 .link-logins > a {
   text-decoration: none;
+  border-radius: 4px;
 }
 
 .notice {
