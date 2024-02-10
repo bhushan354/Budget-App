@@ -73,18 +73,6 @@
   margin-bottom: 18px;
 }
 
-.navbar-new2 {
-  background-color: #3778c2;
-  color: white;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  width: 88vw;
-  justify-content: space-between;
-  padding: 20px;
-  margin-bottom: 18px;
-}
-
 .main-catgry {
   height: 85vh;
   background-color: rgb(228, 228, 228);
