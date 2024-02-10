@@ -27,16 +27,10 @@
   flex-direction: column;
 }
 
-.main-catgry2 {
-  background-color: rgb(228, 228, 228);
-  padding: 12px;
-  height: 75vh;
-}
-
 .all-cat {
-  height: 76vh;
+  height: 78vh;
   background-color: rgb(228, 228, 228);
-  padding: 16px;
+  padding: 11px;
 }
 
 .all-cat2 {
@@ -92,7 +86,8 @@
 }
 
 .main-catgry {
-  height: 83vh;
+  height: 85vh;
+  background-color: rgb(228, 228, 228);
 }
 
 img#hamburger-icon {
@@ -291,6 +286,7 @@ ul.cat-2 {
 }
 
 body {
+  margin: 0;
   font-family: proxima-nova, sans-serif;
   font-weight: 100;
   display: flex;

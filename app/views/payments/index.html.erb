@@ -8,7 +8,7 @@
 </div>
 
 
-<div class="main-catgry2">
+<div class="all-cat">
   <% if @payments.any? %>
   <% total_amount = @payments.sum(:amount) %>
   <span class="amount">Total amount: $<%= total_amount %></span>
