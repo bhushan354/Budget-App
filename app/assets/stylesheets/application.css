@@ -20,6 +20,11 @@
 
 #category-list {
   display: flex;
+  flex-direction: column;
+}
+
+h2.page-title {
+  font-weight: 200;
 }
 
 #category-list2 {
@@ -27,16 +32,13 @@
   flex-direction: column;
 }
 
-.main-catgry2 {
+.all-cat {
+  height: 84vh;
   background-color: rgb(228, 228, 228);
-  padding: 12px;
-  height: 75vh;
 }
 
-.all-cat {
-  height: 76vh;
-  background-color: rgb(228, 228, 228);
-  padding: 16px;
+.list-cat {
+  padding: 10px;
 }
 
 .all-cat2 {
@@ -64,7 +66,6 @@
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  padding: 20px 12px;
 }
 
 .navbar-new {
@@ -79,20 +80,9 @@
   margin-bottom: 18px;
 }
 
-.navbar-new2 {
-  background-color: #3778c2;
-  color: white;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  width: 88vw;
-  justify-content: space-between;
-  padding: 20px;
-  margin-bottom: 18px;
-}
-
 .main-catgry {
-  height: 83vh;
+  height: 85vh;
+  background-color: rgb(228, 228, 228);
 }
 
 img#hamburger-icon {
@@ -101,6 +91,13 @@ img#hamburger-icon {
   align-content: center;
   height: 25px;
   width: 25px;
+  margin-left: 10px;
+}
+
+img#hamburger-icon2 {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
 }
 
 div#hamburger {
@@ -132,6 +129,16 @@ div#back-button {
 }
 
 /* Menu styles */
+
+.amount > a {
+  text-decoration: none;
+}
+
+.link-logins > a {
+  text-decoration: none;
+  border-radius: 4px;
+}
+
 #menu {
   position: absolute;
   height: 100vh;
@@ -168,6 +175,10 @@ div#back-button {
   text-align: center;
 }
 
+.list-cat > a {
+  text-decoration: none;
+}
+
 .splash a {
   display: block;
   height: 3rem;
@@ -194,6 +205,11 @@ div#back-button {
 }
 
 /* User info styles */
+.total-amount > span {
+  color: #616161;
+  font-weight: 400;
+}
+
 .user_info {
   border: 1px solid white;
   height: 5rem;
@@ -219,7 +235,6 @@ div#back-button {
 /* all categories styling  */
 a.item {
   display: flex;
-  margin-top: 15px;
   justify-content: space-around;
   align-items: center;
   background: white;
@@ -272,8 +287,8 @@ span.name {
 
 span.amount {
   text-decoration: none !important;
-  color: rgb(43, 43, 43);
   font-size: 1rem;
+  color: rgb(37, 37, 37);
   font-weight: 600;
 }
 
@@ -291,6 +306,7 @@ ul.cat-2 {
 }
 
 body {
+  margin: 0;
   font-family: proxima-nova, sans-serif;
   font-weight: 100;
   display: flex;
@@ -360,7 +376,6 @@ input:-webkit-autofill:active {
   align-items: center;
   flex-direction: column;
   background-color: rgb(228, 228, 228);
-  flex: 1 1 0%;
 }
 
 .footer2 {
@@ -372,10 +387,19 @@ input:-webkit-autofill:active {
 .error,
 .notice,
 .empty {
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   margin-bottom: 0.5rem;
   padding: 0.5rem;
   font-style: italic;
+}
+
+.total-amount {
+  background-color: rgb(255, 255, 255);
+  height: 45px;
+  align-items: center;
+  display: flex;
+  padding: 4px;
+  justify-content: space-between;
 }
 
 /* login-page */
@@ -394,14 +418,19 @@ input:-webkit-autofill:active {
 .splash {
   background-color: #e4e4e4;
   color: #2b2b2b;
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
 }
 
 .splash h1 {
   color: #2b2b2b;
   font-size: 2.5rem;
-  font-family: 'Pacifico', sans-serif;
+  font-family: 'Pacifico', cursive;
+  font-style: italic;
+}
+
+.link-logins {
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .notice {
