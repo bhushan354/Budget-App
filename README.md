@@ -163,7 +163,7 @@ If you like this project, kindly drop a start ⭐️ for the [repository](git@gi
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to express my heartfelt gratitude to **Microvere** for the invaluable learning experience they have provided. Also I would like to thank to [Assem Zhoraby](https://github.com/zhorabay) on Behance for [Original design idea](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) of the application.
+I would like to express my heartfelt gratitude to **Microvere** for the invaluable learning experience they have provided. Also I would like to thank to [Assem Zhoraby](https://github.com/zhorabay), and Behance for [Original design idea](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) of the application.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
