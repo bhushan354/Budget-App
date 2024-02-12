@@ -1,0 +1,39 @@
+<div id="category-list">
+  <div class="navbar-new"
+      <h2 class="page-title">Log in</h2>
+      <div id="back-button">
+        <%= link_to pages_splash_path, class: 'back-icon' do %>
+        <%= image_tag("back.png", class: "hamburger-menu", id: "hamburger-icon") %>
+        <% end %>
+      </div>
+  </div>
+
+</div>
+
+<main class="login">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field"> 
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+    </div>
+
+    <div class="field"> 
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="container">
+        <%= f.check_box :remember_me %>
+        <span class="checkmark"></span>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+
+    <div class="login_links">
+      <%= render "devise/shared/links" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Log in", class: "login_btn", data: { turbo: false } %>
+    </div>
+  <% end %>
+</main>
